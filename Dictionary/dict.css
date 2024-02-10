@@ -35,6 +35,9 @@ body{
 .meaning{
     display: none;
 }
+.evan{
+    
+}
 @media(max-width:700px){
     .input{
         width:150px;
