@@ -83,8 +83,8 @@ document.addEventListener('DOMContentLoaded', function () {
       const icon = document.getElementById(columnName + "Icon");
 
       rows.sort((a, b) => {
-          const aValue = a.querySelector("td:nth-child(" + (['name', 'email', 'amount', 'amount', 'city'].indexOf(columnName) + 1) + ")").textContent.trim().toLowerCase();
-          const bValue = b.querySelector("td:nth-child(" + (['name', 'email', 'amount', 'amount', 'city'].indexOf(columnName) + 1) + ")").textContent.trim().toLowerCase();
+          const aValue = a.querySelector("td:nth-child(" + (['name', 'email', 'amount', 'date', 'city'].indexOf(columnName) + 1) + ")").textContent.trim().toLowerCase();
+          const bValue = b.querySelector("td:nth-child(" + (['name', 'email', 'amount', 'date', 'city'].indexOf(columnName) + 1) + ")").textContent.trim().toLowerCase();
           return bValue.localeCompare(aValue);
       });
 
