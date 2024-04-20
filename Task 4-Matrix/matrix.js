@@ -26,11 +26,14 @@
                 }
             }
             //slice the matrx in the shaded region
-            let sliced = matrix[0].slice(matrix[0].length / 2);
+            let sliced = matrix[0].slice(rows-1);
+           
             for (let i = 1; i < matrix.length; i++) {
-                sliced = sliced.concat(matrix[i].slice(matrix[i].length / 2 - i, matrix[i].length - i));
+           
+                sliced = sliced.concat(matrix[i].slice(rows-1-i, matrix[i].length- i));
+                }
                
-            }
+            
             //obtain the largest element in the shaded region
             let largest = sliced[0]
             for (let i = 0; i < sliced.length; i++) {
@@ -40,6 +43,5 @@
             }
         
              document.getElementById('large').value = largest
-            
         })
     
