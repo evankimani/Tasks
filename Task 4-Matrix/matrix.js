@@ -12,6 +12,7 @@
             if(rows>columns){
                 alert('columns should be greater or equal to rows')
             }
+            else{
             for (let i = 0; i < rows; i++) {
                 matrix.push([]);
                 let row = table.insertRow();
@@ -32,5 +33,7 @@
                 }   
             }
              document.getElementById('large').value = largest
-        })
+            }
+            })
+    
     
