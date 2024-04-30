@@ -33,5 +33,4 @@
             }
              document.getElementById('large').value = largest
         })
-    const str='john'
-    console.log(str.includes('m'))
+    
