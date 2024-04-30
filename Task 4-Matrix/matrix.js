@@ -11,6 +11,8 @@
             // Generate new matrix
             if(rows>columns){
                 alert('columns should be greater or equal to rows')
+                document.getElementById('large').value = ''
+              
             }
             else{
             for (let i = 0; i < rows; i++) {
