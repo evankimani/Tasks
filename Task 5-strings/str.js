@@ -1,22 +1,36 @@
 const input=document.querySelector('#text').value.toLowerCase().trim()
-//console.log(input)
 const button=document.getElementById('btn')
 const outputEl=document.getElementById('output')
-//console.log(button,outputEl);
 
 button.addEventListener('click',()=>{
-   
-    const words=input.split(' ')
-    console.log(words)
-    let wordsBeforeA=[]
-    for(let i= 0 ;i<words.length;i++){
-        if(words[i].includes('a')){
-           continue;
+//function of generating an array from the string
+function generateArr(str){
+    let arr=[]
+    let words=''
+    for(let i = 0; i<str.length; i++){
+        if(str[i] !==' '){
+            words+= str[i]
         }
         else{
-            wordsBeforeA.push(words[i])
+            arr.push(words)
+            words=''
+        }  
+    }
+    if(words!==''){
+             arr.push(words)
+      }
+     return arr
+   } 
+    arr=generateArr(input)
+
+//generating words before a word with character 'a'
+    let wordsBeforeA=[]
+
+    for(let i= 0 ;i<arr.length;i++){
+        if(arr[i].includes('a')){
+            wordsBeforeA.push(arr[i-1])
         }
     }
-    outputEl.innerHTML=`THE WORDS THAT COME BEFORE 'a':  ${wordsBeforeA.join(',')}`
-  
+   outputEl.innerHTML=`THE WORDS THAT COME BEFORE 'a';  ${wordsBeforeA.join(': ')}`
+
 })
