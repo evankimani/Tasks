@@ -70,8 +70,10 @@ function decimalToBinary(num){
        return hexaArr
    }
      // generating and rendering the number system to the table
-   for(let i=0; i<128;i++){
-      let combinedNum=[]
+  function generateTable(){
+    let combinedNum;
+     for(let i=0; i<128;i++){
+       combinedNum=[]
        combinedNum.push(i)
        combinedNum.push(decimalToBinary(i))
        combinedNum.push(decimalTooctal(i))
@@ -80,13 +82,18 @@ function decimalToBinary(num){
        for(let j=0; j<combinedNum.length;j++){
        let td=document.createElement('td')
 
-    let tn =document.createTextNode(combinedNum[j])
+        let tn =document.createTextNode(combinedNum[j])
 
        td.appendChild(tn)
        tr.appendChild(td)
        let table= document.getElementById('table')
        table.appendChild(tr)
        }
-     
+       console.log(combinedNum)
      }
-   
+     
+     return combinedNum
+     
+  }
+  
+  console.log(generateTable())

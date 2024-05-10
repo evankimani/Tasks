@@ -32,10 +32,11 @@ document.addEventListener('DOMContentLoaded', function () {
           <td>${row.amount}</td>
           <td>${row.date}</td>
           <td>${row.city}</td>
-        `;
+        `; 
         tableBody.appendChild(tr);
     
       });
+  
     }
   //function to render pagination
 
