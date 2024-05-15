@@ -1,0 +1,13 @@
+body{
+    background-color: antiquewhite;
+    height: 100vh;
+}
+#container{
+    margin-top: 50px;
+    margin-left: 20%;
+}
+label{
+    color: brown;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
