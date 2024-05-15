@@ -22,8 +22,8 @@ reader.addEventListener('load',(e)=>{
      const sequenceArr=fileContent.split('0')
      const modifiedFile=removeDuplicatesInSequences(sequenceArr).join('0')
      const modifiedFileSeqence=modifiedFile.split('').join(',')
-     const blob=new Blob([modifiedFileSeqence],{type:'text/plain'})
-link.href=URL.createObjectURL(blob)
+     const blob1=new Blob([modifiedFileSeqence],{type:'text/plain'})
+link.href=URL.createObjectURL(blob1)
     
     })
     reader.readAsText(file)
